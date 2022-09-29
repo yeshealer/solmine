@@ -29,7 +29,7 @@ export default function MintPage() {
                 <Title>HIRE ASTRONAUTS</Title>
                 <MintCard>
                     <img src='assets/rocket.png' alt='rocket' className='absolute -left-[400px] bottom-40' draggable={false} />
-                    <img src='assets/earth.png' alt='rocket' className='absolute -right-[350px] -bottom-10' draggable={false} />
+                    <img src='assets/earth.png' alt='earth' className='absolute hidden -right-[400px] xl:block -bottom-10' draggable={false} />
                     <img src='assets/mint-card-top-bar.png' alt='mint page card top bar' className='w-[300px] lg:w-[400px] xl:w-auto mt-4 lg:mt-16 hidden sm:block' draggable={false} />
                     <CardBody>
                         <CardSection>

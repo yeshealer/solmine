@@ -5,6 +5,8 @@ export const MintBody = wrapn('div')`
     w-screen 
     mb-12
     relative
+    overflow-x-clip
+    overflow-y-visible
 `
 
 export const MintContent = wrapn('div')`

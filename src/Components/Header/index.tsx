@@ -25,7 +25,6 @@ export default function Header() {
         <HeaderBody>
             <HeaderContent>
                 <img src='assets/logo.png' alt='logo' />
-                {/* <div className='gap-8 xl:gap-20 items-center hidden lg:flex'> */}
                 <HeaderLink className='hidden lg:flex'>
                     {HeaderTitle.map((header) => {
                         return (
@@ -51,15 +50,15 @@ export default function Header() {
                 open={open}
                 onClose={onCloseModal}
                 classNames={{
-                    modal: 'w-[90%] rounded-xl block lg:hidden'
+                    modal: 'w-[90%] rounded-xl block lg:hidden overflow-hidden'
                 }}
                 closeIcon={closeIcon}
             >
                 <div className='flex flex-col w-full'>
                     {HeaderTitle.map((header) => {
                         return (
-                            <>
-                                <img src='assets/mint-footer.png' alt='Mint page Footer background' className="absolute -top-5 mint-footer-bg" />
+                            <div key={header.link} className="overflow-hidden">
+                                <img src='assets/mint-footer.png' alt='Mint page Footer background' className="absolute -top-5" />
                                 <div
                                     className={`${location.pathname === ('/' + header.link) && 'shiny-link'} text-white cursor-pointer text-base lg:text-lg xl:text-xl`}
                                     onClick={() => navigate(`/${header.link}`)}
@@ -67,7 +66,7 @@ export default function Header() {
                                 >
                                     {header.name}
                                 </div>
-                            </>
+                            </div>
                         )
                     })}
                 </div>
