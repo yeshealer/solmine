@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Satoshi";
+  src: local("Satoshi"), url("./fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nippo";
+  src: local("Nippo"), url("./fonts/Nippo-Bold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nippo-light";
+  src: local("Nippo"), url("./fonts/Nippo-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.general-button {
+  background-image: url("../public/assets/button-bg.png");
+  background-repeat: no-repeat;
+  color: #ade1ff;
+  text-shadow: 0px 3px 18px rgba(73, 189, 255, 0.71);
+}
+
+.shiny-link {
+  color: #49bdff;
+  text-shadow: 0px 7px 20px #49bdff;
+}
+
+.bg-container {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  top: -100px;
+}
+
+.mint-title {
+  text-shadow: 61px 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+.mint-main-art {
+  pointer-events: none;
+  margin-top: 100px;
+}
+
+.mint-card-body {
+  background-image: url("../public/assets/mint-card.png");
+  background-repeat: no-repeat;
+}
+
+.footer-gradient {
+  background: linear-gradient(256.24deg, #182038 39.22%, rgba(2, 74, 48, 0.64) 108.64%);
+}
+
+.react-responsive-modal-modal {
+  background-color: #00081B;
+  border: 1px solid #A2DDFE;
+}
+
+@media screen and (max-width: 1280px) {
+  .mint-card-body {
+    background-size: 100%;
+  }
+  .general-button {
+    background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg-container {
+    min-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mint-card-body {
+    background-image: none;
+  }
+  .mint-footer-bg {
+    min-width: 700px;
+  }
+  .bg-container {
+    min-width: 700px;
+    top: -50px;
+  }
+  .mint-main-art {
+    margin-top: 10px;
+  }
+}
