@@ -50,22 +50,19 @@ export default function Header() {
                 open={open}
                 onClose={onCloseModal}
                 classNames={{
-                    modal: 'w-[90%] rounded-xl block lg:hidden overflow-hidden'
+                    modal: 'w-[90%] rounded-xl block lg:hidden modal-bg'
                 }}
                 closeIcon={closeIcon}
             >
-                <div className='flex flex-col w-full'>
+                <div className='flex flex-col w-full overflow-hidden relative'>
                     {HeaderTitle.map((header) => {
                         return (
-                            <div key={header.link} className="overflow-hidden">
-                                <img src='assets/mint-footer.png' alt='Mint page Footer background' className="absolute -top-5" />
-                                <div
-                                    className={`${location.pathname === ('/' + header.link) && 'shiny-link'} text-white cursor-pointer text-base lg:text-lg xl:text-xl`}
-                                    onClick={() => navigate(`/${header.link}`)}
-                                    key={header.link}
-                                >
-                                    {header.name}
-                                </div>
+                            <div
+                                className={`${location.pathname === ('/' + header.link) && 'shiny-link'} text-white cursor-pointer text-base lg:text-lg xl:text-xl`}
+                                onClick={() => navigate(`/${header.link}`)}
+                                key={header.link}
+                            >
+                                {header.name}
                             </div>
                         )
                     })}
