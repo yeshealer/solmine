@@ -29,7 +29,7 @@ export default function Header() {
                     {HeaderTitle.map((header) => {
                         return (
                             <div
-                                className={`${location.pathname === ('/' + header.link) && 'shiny-link'} cursor-pointer text-base lg:text-lg xl:text-base 2xl:text-xl`}
+                                className={`${location.pathname === ('/' + header.link) ? 'shiny-link underline-effect-shiny' : 'underline-effect'} cursor-pointer text-base lg:text-lg xl:text-base 2xl:text-xl`}
                                 onClick={() => navigate(`/${header.link}`)}
                                 key={header.link}
                             >

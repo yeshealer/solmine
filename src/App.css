@@ -20,7 +20,12 @@
   background-image: url("../public/assets/button-bg.png");
   background-repeat: no-repeat;
   color: #ade1ff;
-  text-shadow: 0px 3px 18px rgba(73, 189, 255, 0.71);
+  text-shadow: 0px 3px 18px #49bdffb5;
+}
+
+.general-button:hover {
+  color: #49bdffb5;
+  text-shadow: 3px 6px 36px #49bdffb5;
 }
 
 .shiny-link {
@@ -56,8 +61,8 @@
 }
 
 .react-responsive-modal-modal {
-  background-color: #00081B;
-  border: 1px solid #A2DDFE;
+  background-color: #00081b;
+  border: 1px solid #a2ddfe;
 }
 
 .modal-bg {
@@ -65,6 +70,53 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -20px;
+}
+
+.underline-effect {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-effect:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.underline-effect-shiny {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-effect-shiny::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #49bdff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-effect-shiny:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 @media screen and (max-width: 1536px) {

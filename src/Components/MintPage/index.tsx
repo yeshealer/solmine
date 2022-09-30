@@ -51,9 +51,9 @@ export default function MintPage() {
                                 />
                             </Slider>
                             <PlusMinusGroup>
-                                <div className="p-0 border border-stone-800 rounded-md px-2 cursor-pointer"><CardText>-</CardText></div>
+                                <div className="p-0 border border-stone-800 rounded-md px-2 cursor-pointer animation-all duration-300 hover:scale-125"><CardText>-</CardText></div>
                                 01
-                                <div className="p-0 border border-stone-800 rounded-md px-2 cursor-pointer"><CardText>+</CardText></div>
+                                <div className="p-0 border border-stone-800 rounded-md px-2 cursor-pointer animation-all duration-300 hover:scale-125"><CardText>+</CardText></div>
                             </PlusMinusGroup>
                             <TextGroup className='mt-1 lg:mt-3 xl:mt-3 2xl:mt-5'>
                                 <CardText>COST</CardText>
