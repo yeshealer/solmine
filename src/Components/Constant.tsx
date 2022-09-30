@@ -11,6 +11,10 @@ export const HeaderTitle = [
         name: 'Whitepaper',
         link: 'whitepaper'
     },
+    {
+        name: 'Launch',
+        link: 'launch'
+    },
 ]
 
 export const FooterLink = ['twitter', 'telegram', 'discord', 'solana', 'doc']

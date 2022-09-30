@@ -29,7 +29,7 @@ export default function Header() {
                     {HeaderTitle.map((header) => {
                         return (
                             <div
-                                className={`${location.pathname === ('/' + header.link) && 'shiny-link'} cursor-pointer text-base lg:text-lg xl:text-xl`}
+                                className={`${location.pathname === ('/' + header.link) && 'shiny-link'} cursor-pointer text-base lg:text-lg xl:text-base 2xl:text-xl`}
                                 onClick={() => navigate(`/${header.link}`)}
                                 key={header.link}
                             >
@@ -39,7 +39,7 @@ export default function Header() {
                     })}
                 </HeaderLink>
                 <div className='hidden lg:flex'>
-                    <ImageBtn>Launch</ImageBtn>
+                    <ImageBtn>Connect</ImageBtn>
                 </div>
                 {/* </div> */}
                 <div className='bg-transparent hover:bg-[#FFFFFF30] rounded-md transition-all duration-500 p-1 cursor-pointer block lg:hidden' onClick={() => onOpenModal()}>

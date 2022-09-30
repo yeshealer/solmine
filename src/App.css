@@ -67,7 +67,7 @@
   background-position-y: -20px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1536px) {
   .mint-card-body {
     background-size: 100%;
   }
