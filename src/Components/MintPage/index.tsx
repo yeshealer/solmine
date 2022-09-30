@@ -27,6 +27,8 @@ export default function MintPage() {
             <MintContent>
                 <img src='assets/mint-section-art.png' className='mint-main-art w-[250px] md:w-[360px] lg:w-[450px] xl:w-[360px] 2xl:w-auto' alt='mint page main art' />
                 <Title>HIRE ASTRONAUTS</Title>
+                <Description className='pt-6 lg:mt-6 border-t border-[#49bdff]'>Astronaut Crew Members can help you mine SOL at a faster rate. You may mint as many as you like! However, only 4 NFTs are available to stake. Each astronaut gives your operation +1% onto your daily APY! (Max +4%)</Description>
+                <Description className='mt-6 lg:mt-12'>The collection will consist of 3000 NFTs and there is a 1% chance of minting an ALIEN!. Aliens give you a +1% boost in daily APY as well as a % of Solmine fees.</Description>
                 <MintCard>
                     <img src='assets/rocket.png' alt='rocket' className='absolute xl:-left-[250px] 2xl:-left-[400px] bottom-40 w-[200px] 2xl:w-auto hidden xl:block' draggable={false} />
                     <img src='assets/earth.png' alt='earth' className='absolute hidden xl:-right-[250px] 2xl:-right-[400px] xl:block -bottom-10 w-[180px] 2xl:w-auto' draggable={false} />
@@ -88,8 +90,6 @@ export default function MintPage() {
                         <img src='assets/mint-card-image.png' alt='MintCard' className='w-[180px] md:w-[220px] lg:w-[250px] xl:w-[220px] 2xl:w-auto' draggable={false} />
                     </CardBody>
                 </MintCard>
-                <Description>Astronaut Crew Members can help you mine SOL at a faster rate. You may mint as many as you like! However, only 4 NFTs are available to stake. Each astronaut gives your operation +1% onto your daily APY! (Max +4%)</Description>
-                <Description>The collection will consist of 3000 NFTs and there is a 1% chance of minting an ALIEN!. Aliens give you a +1% boost in daily APY as well as a % of Solmine fees.</Description>
                 <Note>Note: The utility of these NFTs doesn't stop there. This is just the beginning of a broader ecosystem. This collection will provide bonuses in a number of upcoming projects. As the ecosystem develops, the demand for these NFTs will grow increasingly stronger! Roadmap info in the Whitepaper!</Note>
             </MintContent>
         </MintBody>

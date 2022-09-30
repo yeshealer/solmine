@@ -61,7 +61,6 @@ export const PlusMinusGroup = wrapn('div')`
 `
 
 export const Description = wrapn('div')`
-    mt-6 lg:mt-12 
     max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-3xl 2xl:max-w-6xl 
     text-sm sm:text-base lg:text-lg xl:text-base 2xl:text-xl 
     leading-8 text-center 
@@ -70,7 +69,7 @@ export const Description = wrapn('div')`
 `
 
 export const Note = wrapn('div')`
-    mt-16 lg:mt-24 
+    mt-8 lg:mt-16
     text-sm sm:text-base lg:text-lg xl:text-base 2xl:text-xl 
     leading-8 text-center text-[#B1ABAB]
     px-2
