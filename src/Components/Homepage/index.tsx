@@ -1,4 +1,3 @@
-import React from 'react'
 import Atropos from 'atropos/react';
 import {
     HomeBody,
@@ -63,7 +62,7 @@ export default function Homepage() {
                     </div>
                 </div>
             </MainContent>
-            <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-20 shadow-lg w-[200px] sm:w-[400px] 2xl:w-auto' />
+            <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-20 shadow-lg w-[200px] sm:w-[400px] 2xl:w-auto' draggable={false} />
             <DescriptionContent>
                 <div>
                     <Title>What is the Solmine?</Title>

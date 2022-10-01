@@ -92,6 +92,20 @@
   background-position-y: -20px;
 }
 
+.launch-status-card {
+  background-image: url("../public/assets/launch-status-card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.launch-main-card-left {
+  background-image: url("../public/assets/launch-main-card-left.png");
+}
+
+.launch-main-card-right {
+  background-image: url("../public/assets/launch-main-card-right.png");
+}
+
 .underline-effect {
   display: inline-block;
   position: relative;
