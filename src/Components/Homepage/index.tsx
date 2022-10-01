@@ -63,7 +63,7 @@ export default function Homepage() {
                     </div>
                 </div>
             </MainContent>
-            <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-20 shadow-lg w-[200px] w-[400px] 2xl:w-auto' />
+            <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-20 shadow-lg w-[200px] sm:w-[400px] 2xl:w-auto' />
             <DescriptionContent>
                 <div>
                     <Title>What is the Solmine?</Title>
@@ -87,9 +87,12 @@ export default function Homepage() {
             <LaunchReactContent>
                 <Title>Are you ready to launch?</Title>
                 <ImageBtn className='mt-5'>Launch</ImageBtn>
-                <div className='blend-effect-big' />
-                <div className='blend-effect-small' />
-                <div className='blend-effect-top' />
+                <div className='blend-effect-tiny sm:blend-effect-big -top-12 -right-12 sm:-top-[45px] sm:-right-[45px]' />
+                <div className='blend-effect-tiny sm:blend-effect-big -bottom-12 -right-12 sm:-bottom-[35px] sm:-right-[35px]' />
+                <div className='blend-effect-tiny sm:blend-effect-small -top-12 -left-12 sm:-top-[30px] sm:-left-[30px]' />
+                <div className='blend-effect-tiny sm:blend-effect-small -bottom-12 -left-12 sm:-bottom-[30px] sm:-left-[30px]' />
+                <div className='blend-effect-tiny-top sm:blend-effect-top top-0 2xl:top-2' />
+                <div className='blend-effect-tiny-top sm:blend-effect-top bottom-2 2xl:bottom-5' />
             </LaunchReactContent>
         </HomeBody>
     )

@@ -35,6 +35,11 @@
   text-shadow: 3px 6px 36px #49bdffb5;
 }
 
+.transparent-button:hover {
+  color: #49bdffb5;
+  text-shadow: 3px 6px 36px #49bdffb5;
+}
+
 .shiny-link {
   color: #49bdff;
   text-shadow: 0px 7px 20px #49bdff;
@@ -146,8 +151,6 @@
   background-blend-mode: color-dodge;
   mix-blend-mode: color-dodge;
   position: absolute;
-  top: -120px;
-  right: -120px;
 }
 
 .blend-effect-small {
@@ -157,8 +160,6 @@
   background-blend-mode: color-dodge;
   mix-blend-mode: color-dodge;
   position: absolute;
-  top: -100px;
-  left: -100px;
 }
 
 .blend-effect-top {
@@ -168,7 +169,24 @@
   background-blend-mode: color-dodge;
   mix-blend-mode: color-dodge;
   position: absolute;
-  top: 0px;
+}
+
+.blend-effect-tiny {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #000000 100%);
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  position: absolute;
+}
+
+.blend-effect-tiny-top {
+  width: 200px;
+  height: 20px;
+  background: radial-gradient(50% 388.6% at 50% 50%, #ffffff 0%, #000000 100%);
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  position: absolute;
 }
 
 @media screen and (max-width: 1536px) {

@@ -18,7 +18,7 @@ export const DescriptionContent = wrapn('div')`
 `
 
 export const Title = wrapn('div')`
-    text-2xl sm:text-[30px] lg:text-[35px] 2xl:text-[45px] font-["Nippo"] font-bold
+    text-xl sm:text-[30px] lg:text-[35px] 2xl:text-[45px] font-["Nippo"] font-bold
 `
 
 export const Description = wrapn('div')`
