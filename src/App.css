@@ -167,9 +167,9 @@
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
-  background-color: #5E8CFB;
+  background-color: #5e8cfb;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

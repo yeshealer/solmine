@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Atropos from 'atropos/react';
 import Carousel from "react-multi-carousel";
 import ReactSlider from "react-slider"
@@ -33,6 +33,8 @@ const StyledTrack = styled.div<StyledTrackProps>`
 `;
 
 const LaunchPage = () => {
+    const [isOn, setIsOn] = useState(false)
+
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1280 },
@@ -134,11 +136,11 @@ const LaunchPage = () => {
                         <div className='flex flex-col sm:flex-row items-center gap-3 w-full 2xl:w-4/5 justify-around 2xl:justify-between mt-3 2xl:mt-0'>
                             <div className='flex flex-col items-center w-full'>
                                 <input type="text" id="miners_purchased" className="w-1/2 sm:w-2/3 2xl:w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB]'>APPROVE SOL</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>APPROVE SOL</button>
                             </div>
                             <div className='flex flex-col items-center w-full'>
                                 <input type="text" id="miners_purchased" className="w-1/2 sm:w-2/3 2xl:w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB]'>DEPOSIT SOL</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>DEPOSIT SOL</button>
                             </div>
                         </div>
                         <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
@@ -146,8 +148,8 @@ const LaunchPage = () => {
                             <SubTitle>ABOVE AVAILABLE REWARDS</SubTitle>
                             <input type="text" id="miners_purchased" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="SOL" required />
                             <div className='w-1/2 flex justify-between mt-1'>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB]'>COMPOUND</button>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB]'>CLAIM (-80%)</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>COMPOUND</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>CLAIM (-80%)</button>
                             </div>
                         </InputGroup>
                         <InputGroup>
@@ -157,9 +159,9 @@ const LaunchPage = () => {
                         <InputGroup>
                             <SubTitle>AUTO COMPOUNDER</SubTitle>
                             <div className='flex items-start mt-1 gap-2'>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#A2DDFE] border-[1px] border-[#A2DDFE] px-5 py-1'>Off</button>
+                                <button className={`font-["Nippo-light"] text-[17px] ${isOn ? 'text-[#A2DDFE]' : 'bg-[#A2DDFE] text-[#170231]'} border-[1px] border-[#A2DDFE] px-5 py-1`} onClick={() => setIsOn(!isOn)}>Off</button>
                                 <div className='flex flex-col items-center'>
-                                    <button className='font-["Nippo-light"] text-[17px] text-[#A2DDFE] border-[1px] border-[#A2DDFE] px-5 py-1'>ON</button>
+                                    <button className={`font-["Nippo-light"] text-[17px] ${isOn ? 'bg-[#A2DDFE] text-[#170231]' : 'text-[#A2DDFE]'} border-[1px] border-[#A2DDFE] px-5 py-1`} onClick={() => setIsOn(!isOn)}>ON</button>
                                     <SubTitle>5% TAX</SubTitle>
                                 </div>
                             </div>
@@ -304,7 +306,7 @@ const LaunchPage = () => {
                             <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>(INITIAL INVESTMENT)</div>
                             <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>50% TAX</div>
                             <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="0 SOL" required />
-                            <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] mt-2'>WITHDRAW SOL</button>
+                            <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] mt-2 underline-effect-button'>WITHDRAW SOL</button>
                         </InputGroup>
                     </LaunchMainCardRight>
                 </LaunchMainCardGroup>
@@ -315,12 +317,12 @@ const LaunchPage = () => {
                         <div className='font-["Nippo-light"] text-base font-thin'>3% Referrer</div>
                         <div className='font-["Nippo-light"] text-base font-thin'>1% Referred</div>
                         <div className="w-2/3 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3">8 SOL</div>
-                        <button className='font-["Nippo-light"] text-[17px] text-[#AE9FF6] mt-2'>COMPOUND</button>
+                        <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] mt-2 underline-effect-button'>COMPOUND</button>
                     </FooterCard>
                     <FooterCard>
                         <SubTitle>REFERRAL LINK</SubTitle>
                         <div className="w-2/3 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3">https://solmine.is</div>
-                        <button className='font-["Nippo-light"] text-[17px] text-[#AE9FF6] mt-2'>(CLICK TO COPY)</button>
+                        <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] mt-2 underline-effect-button'>(CLICK TO COPY)</button>
                     </FooterCard>
                 </FooterCardGroup>
             </Content >
