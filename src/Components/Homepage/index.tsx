@@ -24,7 +24,7 @@ export default function Homepage() {
                         <div className='text-center lg:text-start text-base sm:text-xl md:text-2xl xl:text-[20px] 2xl:text-[25px]'>Welcome  to the Solmin! </div>
                         <div className='text-center lg:text-start text-base sm:text-xl md:text-2xl xl:text-[20px] 2xl:text-[25px]'>Solana’s  First P2E NFT Staking Miner.</div>
                         <div className='flex items-end 2xl:items-center justify-center lg:justify-start mt-4 lg:mt-0'>
-                            <ImageBtn>Whitepaper</ImageBtn>
+                            <ImageBtn>Launch</ImageBtn>
                             <TransparentBtn>Mint</TransparentBtn>
                         </div>
                     </div>
@@ -42,21 +42,21 @@ export default function Homepage() {
                                 data-atropos-offset="-4"
                                 alt=''
                                 draggable={false}
-                                className='absolute w-[80px] sm:w-[110px] xl:w-[120px] 2xl:w-[180px] top-20'
+                                className='absolute w-[120px] sm:w-[140px] xl:w-[160px] 2xl:w-[180px] top-20'
                             />
                             <img
                                 src='assets/atropos-3.png'
                                 data-atropos-offset="4"
                                 alt=''
                                 draggable={false}
-                                className='absolute right-0 top-32 w-[160px] sm:w-[240px] xl:w-[270px] 2xl:w-[400px]'
+                                className='absolute right-0 w-[270px] sm:w-[300px] xl:w-[350px] 2xl:w-[400px]'
                             />
                             <img
                                 src='assets/atropos-4.png'
                                 data-atropos-offset="10"
                                 alt=''
                                 draggable={false}
-                                className='absolute bottom-20 left-10 w-[200px] sm:w-[250px] xl:w-[300px] 2xl:w-[400px]'
+                                className='absolute bottom-20 sm:bottom-32 left-10 w-[300px] sm:w-[380px] lg:w-[300px] 2xl:w-[500px]'
                             />
                         </Atropos>
                     </div>
