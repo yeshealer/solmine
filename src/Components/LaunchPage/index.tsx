@@ -103,15 +103,15 @@ const LaunchPage = () => {
                 <LaunchStatusCardGroup>
                     <LaunchStatusCard>
                         <Title>TOTAL USERS</Title>
-                        <input type="text" id="total_user" className="w-4/5 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="2" required />
+                        <div className="w-4/5 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 text-center font-['Nippo-light'] outline-none mt-3">10</div>
                     </LaunchStatusCard>
                     <LaunchStatusCard>
                         <Title>CURRENT TVL</Title>
-                        <input type="text" id="current_tvl" className="w-4/5 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="0 SOL" required />
+                        <div className="w-4/5 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 text-center font-['Nippo-light'] outline-none mt-3">2 SOL</div>
                     </LaunchStatusCard>
                     <LaunchStatusCard>
                         <Title>TOTAL DAILY APY</Title>
-                        <input type="text" id="total_daily_apy" className="w-4/5 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="%" required />
+                        <div className="w-4/5 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 text-center font-['Nippo-light'] outline-none mt-3">15%</div>
                     </LaunchStatusCard>
                 </LaunchStatusCardGroup>
                 <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-20 shadow-lg w-[200px] sm:w-[400px] 2xl:w-auto' draggable={false} />
@@ -120,15 +120,15 @@ const LaunchPage = () => {
                         <Title>MINING PORTAL</Title>
                         <InputGroup>
                             <SubTitle>YOUR WALLET</SubTitle>
-                            <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
+                            <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">0 SOL</div>
                         </InputGroup>
                         <InputGroup>
                             <SubTitle>SOL INVESTED</SubTitle>
-                            <input type="text" id="sol_invested" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="SOL" required />
+                            <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">4 SOL</div>
                         </InputGroup>
                         <InputGroup>
                             <SubTitle>MINERS PURCHASED</SubTitle>
-                            <input type="text" id="miners_purchased" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0" required />
+                            <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">0</div>
                         </InputGroup>
                         <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
                         <div className='flex flex-col sm:flex-row items-center gap-3 w-full 2xl:w-4/5 justify-around 2xl:justify-between mt-3 2xl:mt-0'>
@@ -169,7 +169,7 @@ const LaunchPage = () => {
                         <Title>OPERATIONS PORTAL</Title>
                         <InputGroup className='mt-3'>
                             <SubTitle>ASTRONAUTS LEFT</SubTitle>
-                            <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="" required />
+                            <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">5</div>
                         </InputGroup>
                         <ImageBtn className='my-1 2xl:mt-3'>Mint</ImageBtn>
                         <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-3 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
@@ -195,9 +195,9 @@ const LaunchPage = () => {
                                 </Carousel>
                             </div>
                             <div className='grid grid-rows-3'>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB]'>STAKE</button>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB]'>UNSTAKE</button>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB]'>APPROVE</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>STAKE</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>UNSTAKE</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>APPROVE</button>
                             </div>
                         </div>
                         <div className='mt-3 grid grid-cols-2 sm:grid-cols-4 w-4/5'>
@@ -314,17 +314,17 @@ const LaunchPage = () => {
                         <SubTitle>REFERRAL REWARDS</SubTitle>
                         <div className='font-["Nippo-light"] text-base font-thin'>3% Referrer</div>
                         <div className='font-["Nippo-light"] text-base font-thin'>1% Referred</div>
-                        <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="SOL" required />
+                        <div className="w-2/3 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3">8 SOL</div>
                         <button className='font-["Nippo-light"] text-[17px] text-[#AE9FF6] mt-2'>COMPOUND</button>
                     </FooterCard>
                     <FooterCard>
                         <SubTitle>REFERRAL LINK</SubTitle>
-                        <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="" required />
+                        <div className="w-2/3 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3">https://solmine.is</div>
                         <button className='font-["Nippo-light"] text-[17px] text-[#AE9FF6] mt-2'>(CLICK TO COPY)</button>
                     </FooterCard>
                 </FooterCardGroup>
-            </Content>
-        </HomeBody>
+            </Content >
+        </HomeBody >
     )
 }
 

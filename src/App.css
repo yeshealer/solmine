@@ -156,6 +156,29 @@
   transform-origin: bottom left;
 }
 
+.underline-effect-button {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-effect-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 10px;
+  left: 0;
+  background-color: #5E8CFB;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-effect-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .launch-ready {
   background-image: url("../public/assets/home-footer-card.png");
   background-repeat: no-repeat;
