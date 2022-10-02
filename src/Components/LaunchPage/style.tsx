@@ -10,43 +10,55 @@ export const HomeBody = wrapn('div')`
 `
 
 export const Content = wrapn('div')`
-    w-full max-w-7xl flex flex-col items-center
+    w-full max-w-5xl 2xl:max-w-7xl flex flex-col items-center
 `
 
 export const LaunchStatusCardGroup = wrapn('div')`
-    w-full mt-32 grid grid-cols-3 justify-between gap-auto
+    lg:w-full mt-32 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-0
 `
 
 export const LaunchStatusCard = wrapn('div')`
     launch-status-card
-    w-[372px] h-[185px]
+    w-[300px] h-[140px] 2xl:w-[372px] 2xl:h-[185px]
     flex flex-col items-center justify-center
 `
 
 export const Title = wrapn('div')`
-    font-["Nippo"] text-[30px] text-[#A3DDFF]
+    font-["Nippo-light"] 2xl:font-["Nippo"] text-2xl 2xl:text-[30px] text-[#A3DDFF]
 `
 
 export const LaunchMainCardGroup = wrapn('div')`
-    flex gap-10
+    flex flex-col lg:flex-row gap-10
 `
 
 export const LaunchMainCardLeft = wrapn('div')`
     launch-main-card-left
-    w-[625px] h-[872px]
+    w-[520px] h-[700px] 2xl:w-[625px] 2xl:h-[872px] bg-contain bg-no-repeat
     flex flex-col items-center justify-center
 `
 
 export const LaunchMainCardRight = wrapn('div')`
     launch-main-card-right
-    w-[625px] h-[872px]
+    border-t border-[#A3DDFF] sm:border-none
+    w-[520px] h-[700px] 2xl:w-[625px] 2xl:h-[872px] bg-contain bg-no-repeat
     flex flex-col items-center justify-center
 `
 
 export const InputGroup = wrapn('div')`
-    w-full flex flex-col items-center mt-3
+    w-full flex flex-col items-center mt-1 2xl:mt-3
 `
 
 export const SubTitle = wrapn('div')`
-    text-[17px] text-[#A3DDFF]
+    text-[17px] text-[#A3DDFF] font-["Nippo-light"]
+`
+
+export const FooterCardGroup = wrapn('div')`
+    lg:w-4/5 flex justify-between mb-16 flex-col lg:flex-row gap-5 lg:gap-0
+`
+
+export const FooterCard = wrapn('div')`
+    launch-footer-card
+    bg-contain bg-no-repeat
+    w-[380px] h-[220px] 2xl:w-[456px] 2xl:h-[269px]
+    flex flex-col items-center justify-center
 `

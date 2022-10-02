@@ -1,6 +1,9 @@
+import React from 'react';
 import Atropos from 'atropos/react';
 import Carousel from "react-multi-carousel";
+import ReactSlider from "react-slider"
 import { Icon } from '@iconify/react';
+import styled from 'styled-components';
 import { ImageBtn } from '../style';
 import {
     HomeBody,
@@ -12,9 +15,22 @@ import {
     LaunchMainCardLeft,
     LaunchMainCardRight,
     InputGroup,
-    SubTitle
+    SubTitle,
+    FooterCardGroup,
+    FooterCard
 } from './style'
 import "react-multi-carousel/lib/styles.css";
+
+interface StyledTrackProps {
+    index: number
+}
+
+const StyledTrack = styled.div<StyledTrackProps>`
+    top: 0;
+    bottom: 0;
+    background: ${props => (props.index === 2 ? '#004C60' : props.index === 1 ? '#00C7FC' : '#004C60')};
+    border-radius: 999px;
+`;
 
 const LaunchPage = () => {
     const responsive = {
@@ -47,9 +63,12 @@ const LaunchPage = () => {
             </div>
         );
     };
+
+    const Track = (props: any, state: any) => <StyledTrack {...props} index={state.index} />;
     return (
         <HomeBody>
-            <img src='assets/launch-bg.png' alt='Homepage background' className='bg-container' />
+            <img src='assets/launch-bg.png' alt='LaunchPage background' className='bg-container' />
+            <img src='assets/launch-footer-bg.png' alt='LaunchPage background' className='absolute -bottom-[100px] sm:-bottom-[150px] lg:-bottom-[250px] home-footer-bg' />
             <Atropos shadow={false} highlight={false} className="w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] lg:w-[400px] lg:h-[400px] xl:w-[450px] xl:h-[450px] 2xl:w-[550px] 2xl:h-[550px] relative mt-20">
                 <img
                     src='assets/atropos-1.png'
@@ -111,18 +130,18 @@ const LaunchPage = () => {
                             <SubTitle>MINERS PURCHASED</SubTitle>
                             <input type="text" id="miners_purchased" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0" required />
                         </InputGroup>
-                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px]' draggable={false} />
-                        <div className='flex items-center w-4/5 justify-between'>
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
+                        <div className='flex flex-col sm:flex-row items-center gap-3 w-full 2xl:w-4/5 justify-around 2xl:justify-between mt-3 2xl:mt-0'>
                             <div className='flex flex-col items-center w-full'>
-                                <input type="text" id="miners_purchased" className="w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
+                                <input type="text" id="miners_purchased" className="w-1/2 sm:w-2/3 2xl:w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB]'>APPROVE SOL</button>
                             </div>
                             <div className='flex flex-col items-center w-full'>
-                                <input type="text" id="miners_purchased" className="w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
+                                <input type="text" id="miners_purchased" className="w-1/2 sm:w-2/3 2xl:w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB]'>DEPOSIT SOL</button>
                             </div>
                         </div>
-                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px]' draggable={false} />
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
                         <InputGroup>
                             <SubTitle>ABOVE AVAILABLE REWARDS</SubTitle>
                             <input type="text" id="miners_purchased" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="SOL" required />
@@ -146,14 +165,14 @@ const LaunchPage = () => {
                             </div>
                         </InputGroup>
                     </LaunchMainCardLeft>
-                    <LaunchMainCardRight>
+                    <LaunchMainCardRight className='pt-10'>
                         <Title>OPERATIONS PORTAL</Title>
-                        <InputGroup className='mt-5'>
+                        <InputGroup className='mt-3'>
                             <SubTitle>ASTRONAUTS LEFT</SubTitle>
                             <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="" required />
                         </InputGroup>
-                        <ImageBtn className='mt-4'>Mint</ImageBtn>
-                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-4 shadow-lg w-[100px] sm:w-[300px]' draggable={false} />
+                        <ImageBtn className='my-1 2xl:mt-3'>Mint</ImageBtn>
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-3 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
                         <div className='flex w-1/2 justify-between'>
                             <div className='w-[150px] relative'>
                                 <Carousel
@@ -181,8 +200,129 @@ const LaunchPage = () => {
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB]'>APPROVE</button>
                             </div>
                         </div>
+                        <div className='mt-3 grid grid-cols-2 sm:grid-cols-4 w-4/5'>
+                            <div className='flex flex-col items-center'>
+                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                <div className='flex items-end mt-1'>
+                                    <img src='assets/lightning.png' alt='Lightning' />
+                                    <div className='flex flex-col items-center'>
+                                        <ReactSlider
+                                            minDistance={10}
+                                            defaultValue={[0, 100]}
+                                            className="w-full h-[3px] pr-2 rounded-md cursor-grab"
+                                            trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
+                                            thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
+                                            renderTrack={Track}
+                                            withTracks
+                                            pearling
+                                        />
+                                        <div className='flex items-center mt-1 gap-1'>
+                                            <Icon icon="ant-design:clock-circle-filled" color="#00e9fd" width="16" height="16" />
+                                            <div className='text-xs'>12:00:30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='flex flex-col items-center'>
+                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                <div className='flex items-end mt-1'>
+                                    <img src='assets/lightning.png' alt='Lightning' />
+                                    <div className='flex flex-col items-center'>
+                                        <ReactSlider
+                                            minDistance={10}
+                                            defaultValue={[0, 50]}
+                                            className="w-full h-[3px] pr-2 rounded-md cursor-grab"
+                                            trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
+                                            thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
+                                            renderTrack={Track}
+                                            withTracks
+                                            pearling
+                                        />
+                                        <div className='flex items-center mt-1 gap-1'>
+                                            <Icon icon="ant-design:clock-circle-filled" color="#00e9fd" width="16" height="16" />
+                                            <div className='text-xs'>06:00:30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='flex flex-col items-center'>
+                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                <div className='flex items-start mt-1'>
+                                    <img src='assets/lightning.png' alt='Lightning' />
+                                    <div className='flex flex-col items-center mt-[6px]'>
+                                        <div className='w-full'>
+                                            <ReactSlider
+                                                minDistance={10}
+                                                defaultValue={[0, 0]}
+                                                className="w-full h-[3px] pr-2 rounded-md cursor-grab"
+                                                trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
+                                                thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
+                                                renderTrack={Track}
+                                                withTracks
+                                                pearling
+                                            />
+                                        </div>
+                                        <div className='flex items-start mt-1 gap-1'>
+                                            <Icon icon="ant-design:clock-circle-filled" color="#00e9fd" width="16" height="16" />
+                                            <div className='flex flex-col items-center'>
+                                                <div className='text-xs'>00:00:00</div>
+                                                <div className='text-xs'>timeout</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='flex flex-col items-center'>
+                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                <div className='flex items-end mt-1'>
+                                    <img src='assets/lightning.png' alt='Lightning' />
+                                    <div className='flex flex-col items-center'>
+                                        <ReactSlider
+                                            minDistance={10}
+                                            defaultValue={[0, 100]}
+                                            className="w-full h-[3px] pr-2 rounded-md cursor-grab"
+                                            trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
+                                            thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
+                                            renderTrack={Track}
+                                            withTracks
+                                            pearling
+                                        />
+                                        <div className='flex items-center mt-1 gap-1'>
+                                            <Icon icon="ant-design:clock-circle-filled" color="#00e9fd" width="16" height="16" />
+                                            <div className='text-xs'>12:00:30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='mt-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
+                        <InputGroup>
+                            <SubTitle>FORCED WITHDRAW</SubTitle>
+                            <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>(INITIAL INVESTMENT)</div>
+                            <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>50% TAX</div>
+                            <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="0 SOL" required />
+                            <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] mt-2'>WITHDRAW SOL</button>
+                        </InputGroup>
                     </LaunchMainCardRight>
                 </LaunchMainCardGroup>
+                <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-10 shadow-lg w-[200px] sm:w-[400px] 2xl:w-auto' draggable={false} />
+                <FooterCardGroup>
+                    <FooterCard>
+                        <SubTitle>REFERRAL REWARDS</SubTitle>
+                        <div className='font-["Nippo-light"] text-base font-thin'>3% Referrer</div>
+                        <div className='font-["Nippo-light"] text-base font-thin'>1% Referred</div>
+                        <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="SOL" required />
+                        <button className='font-["Nippo-light"] text-[17px] text-[#AE9FF6] mt-2'>COMPOUND</button>
+                    </FooterCard>
+                    <FooterCard>
+                        <SubTitle>REFERRAL LINK</SubTitle>
+                        <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#835EFF] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="" required />
+                        <button className='font-["Nippo-light"] text-[17px] text-[#AE9FF6] mt-2'>(CLICK TO COPY)</button>
+                    </FooterCard>
+                </FooterCardGroup>
             </Content>
         </HomeBody>
     )

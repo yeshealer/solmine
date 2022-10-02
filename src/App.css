@@ -106,6 +106,10 @@
   background-image: url("../public/assets/launch-main-card-right.png");
 }
 
+.launch-footer-card {
+  background-image: url("../public/assets/launch-footer-card.png");
+}
+
 .underline-effect {
   display: inline-block;
   position: relative;
@@ -234,5 +238,11 @@
   }
   .mint-main-art {
     margin-top: 10px;
+  }
+  .launch-main-card-left {
+    background-image: none;
+  }
+  .launch-main-card-right {
+    background-image: none;
   }
 }
