@@ -173,7 +173,9 @@ const LaunchPage = () => {
                             <SubTitle>ASTRONAUTS LEFT</SubTitle>
                             <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">5</div>
                         </InputGroup>
-                        <ImageBtn className='my-1 2xl:mt-3'>Mint</ImageBtn>
+                        <div className='h-28'>
+                            <ImageBtn className='my-1 2xl:mt-3 relative'>Mint</ImageBtn>
+                        </div>
                         <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-3 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
                         <div className='flex w-1/2 justify-between'>
                             <div className='w-[150px] relative'>
