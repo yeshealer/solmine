@@ -80,16 +80,39 @@
   background: linear-gradient(256.24deg, #182038 39.22%, rgba(2, 74, 48, 0.64) 108.64%);
 }
 
-.react-responsive-modal-modal {
-  background-color: #00081b;
-  border: 1px solid #a2ddfe;
-}
-
 .modal-bg {
   background-image: url("../public/assets/mint-footer.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -20px;
+  background-color: #00081b;
+  border: 1px solid #a2ddfe;
+}
+
+.launch-nft {
+  background-image: url("../public/assets/image_path.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 115px;
+  padding-top: 5px;
+  padding-left: 6px;
+  overflow: hidden;
+}
+
+.launch-nft img {
+  width: 95%;
+  height: 90%;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%);
+  clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%);
+  z-index: -1;
+}
+
+.footer-modal {
+  background: linear-gradient(180deg, rgba(3, 87, 135, 0.36) 0%, rgba(0, 38, 60, 0.88) 100%);
+  backdrop-filter: blur(4.5px);
+  border: 1px solid #1ca7f5;
+  border-radius: 0;
 }
 
 .launch-status-card {

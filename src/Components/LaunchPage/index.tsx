@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import ReactSlider from "react-slider"
 import { Icon } from '@iconify/react';
 import styled from 'styled-components';
+import { ToastContainer, toast } from 'react-toastify';
 import { ImageBtn } from '../style';
 import {
     HomeBody,
@@ -19,6 +20,7 @@ import {
     FooterCardGroup,
     FooterCard
 } from './style'
+import 'react-toastify/dist/ReactToastify.css';
 import "react-multi-carousel/lib/styles.css";
 
 interface StyledTrackProps {
@@ -56,10 +58,10 @@ const LaunchPage = () => {
         const { carouselState: { currentSlide } } = rest;
         return (
             <div className="w-[500px]">
-                <button className={currentSlide === 0 ? 'disable' : 'absolute -left-[25px] top-[55px]'} onClick={() => previous()}>
+                <button className={currentSlide === 0 ? 'disable' : 'absolute -left-[25px] top-[40px]'} onClick={() => previous()}>
                     <Icon icon="bxs:left-arrow-alt" color="#00e9fd" width="30" height="30" />
                 </button>
-                <button onClick={() => next()} className="absolute -right-[25px] top-[55px]">
+                <button onClick={() => next()} className="absolute -right-[25px] top-[40px]">
                     <Icon icon="bxs:right-arrow-alt" color="#00e9fd" width="30" height="30" />
                 </button>
             </div>
@@ -67,6 +69,10 @@ const LaunchPage = () => {
     };
 
     const Track = (props: any, state: any) => <StyledTrack {...props} index={state.index} />;
+
+    const notify = () => toast("Wow so easy!", {
+        theme: 'dark'
+    });
     return (
         <HomeBody>
             <img src='assets/launch-bg.png' alt='LaunchPage background' className='bg-container' />
@@ -132,29 +138,24 @@ const LaunchPage = () => {
                             <SubTitle>MINERS PURCHASED</SubTitle>
                             <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">0</div>
                         </InputGroup>
-                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
-                        <div className='flex flex-col sm:flex-row items-center gap-3 w-full 2xl:w-4/5 justify-around 2xl:justify-between mt-3 2xl:mt-0'>
-                            <div className='flex flex-col items-center w-full'>
-                                <input type="text" id="miners_purchased" className="w-1/2 sm:w-2/3 2xl:w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>APPROVE SOL</button>
-                            </div>
-                            <div className='flex flex-col items-center w-full'>
-                                <input type="text" id="miners_purchased" className="w-1/2 sm:w-2/3 2xl:w-9/10 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>DEPOSIT SOL</button>
-                            </div>
-                        </div>
-                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[180px] sm:w-[300px]' draggable={false} />
+                        <InputGroup>
+                            <input type="text" id="miners_purchased" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="0 SOL" required />
+                            <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button' onClick={notify}>DEPOSIT SOL</button>
+                        </InputGroup>
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[180px] sm:w-[300px]' draggable={false} />
                         <InputGroup>
                             <SubTitle>ABOVE AVAILABLE REWARDS</SubTitle>
-                            <input type="text" id="miners_purchased" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="SOL" required />
+                            <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">SOL</div>
                             <div className='w-1/2 flex justify-between mt-1'>
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>COMPOUND</button>
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>CLAIM (-80%)</button>
                             </div>
                         </InputGroup>
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[180px] sm:w-[300px] block sm:hidden' draggable={false} />
                         <InputGroup>
                             <SubTitle>COMPOUND TIMER</SubTitle>
-                            <input type="text" id="miners_purchased" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1" placeholder="" required />
+                            <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">0</div>
                         </InputGroup>
                         <InputGroup>
                             <SubTitle>AUTO COMPOUNDER</SubTitle>
@@ -193,21 +194,28 @@ const LaunchPage = () => {
                                     infinite
                                     ssr
                                 >
-                                    <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} />
-                                    <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} />
-                                    <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} />
+                                    <div className='launch-nft'>
+                                        <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    </div>
+                                    <div className='launch-nft'>
+                                        <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    </div>
+                                    <div className='launch-nft'>
+                                        <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    </div>
                                 </Carousel>
                             </div>
-                            <div className='grid grid-rows-3'>
+                            <div className='grid grid-rows-2'>
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>STAKE</button>
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>UNSTAKE</button>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>APPROVE</button>
                             </div>
                         </div>
                         <div className='mt-3 grid grid-cols-2 sm:grid-cols-4 w-4/5'>
                             <div className='flex flex-col items-center'>
-                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
-                                <div className='flex items-end mt-1'>
+                                <div className='launch-nft'>
+                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                </div>
+                                <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
                                     <div className='flex flex-col items-center'>
                                         <ReactSlider
@@ -229,8 +237,10 @@ const LaunchPage = () => {
                             </div>
 
                             <div className='flex flex-col items-center'>
-                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
-                                <div className='flex items-end mt-1'>
+                                <div className='launch-nft'>
+                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                </div>
+                                <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
                                     <div className='flex flex-col items-center'>
                                         <ReactSlider
@@ -252,8 +262,10 @@ const LaunchPage = () => {
                             </div>
 
                             <div className='flex flex-col items-center'>
-                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
-                                <div className='flex items-start mt-1'>
+                                <div className='launch-nft'>
+                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                </div>
+                                <div className='flex items-start -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
                                     <div className='flex flex-col items-center mt-[6px]'>
                                         <div className='w-full'>
@@ -280,8 +292,10 @@ const LaunchPage = () => {
                             </div>
 
                             <div className='flex flex-col items-center'>
-                                <img src='assets/launch-card-carousel.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
-                                <div className='flex items-end mt-1'>
+                                <div className='launch-nft'>
+                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                </div>
+                                <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
                                     <div className='flex flex-col items-center'>
                                         <ReactSlider
@@ -328,6 +342,17 @@ const LaunchPage = () => {
                     </FooterCard>
                 </FooterCardGroup>
             </Content >
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </HomeBody >
     )
 }
