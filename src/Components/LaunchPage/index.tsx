@@ -195,13 +195,13 @@ const LaunchPage = () => {
                                     ssr
                                 >
                                     <div className='launch-nft'>
-                                        <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
                                     </div>
                                     <div className='launch-nft'>
-                                        <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
                                     </div>
                                     <div className='launch-nft'>
-                                        <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
                                     </div>
                                 </Carousel>
                             </div>
@@ -213,7 +213,7 @@ const LaunchPage = () => {
                         <div className='mt-3 grid grid-cols-2 sm:grid-cols-4 w-4/5'>
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
                                 </div>
                                 <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
@@ -238,7 +238,7 @@ const LaunchPage = () => {
 
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
                                 </div>
                                 <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
@@ -263,7 +263,7 @@ const LaunchPage = () => {
 
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
                                 </div>
                                 <div className='flex items-start -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
@@ -293,7 +293,7 @@ const LaunchPage = () => {
 
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/nft.png' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
                                 </div>
                                 <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />

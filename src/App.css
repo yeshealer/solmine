@@ -90,7 +90,7 @@
 }
 
 .launch-nft {
-  background-image: url("../public/assets/image_path.png");
+  background-image: url("../public/assets/image_path_launch.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 115px;
@@ -100,11 +100,26 @@
   overflow: hidden;
 }
 
+.mint-nft {
+  background-image: url("../public/assets/image_path_mint.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 6px;
+  padding-left: 6px;
+  overflow: hidden;
+}
+
 .launch-nft img {
   width: 95%;
   height: 90%;
   -webkit-clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%);
   clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%);
+  z-index: -1;
+}
+
+.mint-nft img {
+  /* -webkit-clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%); */
+  clip-path: polygon(29% 0, 96% 0, 96% 50%, 96% 98%, 0 98%, 0 30%);
   z-index: -1;
 }
 

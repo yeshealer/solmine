@@ -87,7 +87,9 @@ export default function MintPage() {
                             </div>
                             <ImageBtn className='mt-5 sm:mt-1 lg:mt-3 xl:mt-3 2xl:mt-8'>Mint</ImageBtn>
                         </CardSection>
-                        <img src='assets/mint-card-image.png' alt='MintCard' className='w-[180px] md:w-[220px] lg:w-[250px] xl:w-[220px] 2xl:w-auto' draggable={false} />
+                        <div className='mint-nft w-[180px] md:w-[220px] lg:w-[250px] xl:w-[220px] 2xl:w-auto'>
+                            <img src='assets/mint-nft.png' alt='MintCard' className='w-[180px] md:w-[220px] lg:w-[250px] xl:w-[220px] 2xl:w-auto' draggable={false} />
+                        </div>
                     </CardBody>
                 </MintCard>
                 <Note>Note: The utility of these NFTs doesn't stop there. This is just the beginning of a broader ecosystem. This collection will provide bonuses in a number of upcoming projects. As the ecosystem develops, the demand for these NFTs will grow increasingly stronger! Roadmap info in the Whitepaper!</Note>
