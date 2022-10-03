@@ -25,7 +25,7 @@ interface StyledTrackProps {
 const StyledTrack = styled.div<StyledTrackProps>`
     top: 0;
     bottom: 0;
-    background: ${props => (props.index === 2 ? '#004C60' : props.index === 1 ? '#00C7FC' : '#004C60')};
+    background: ${props => (props.index === 2 ? '#004C60' : props.index === 1 ? '#004C60' : '#00C7FC')};
     border-radius: 999px;
 `;
 
@@ -55,7 +55,7 @@ export default function MintPage() {
                             <Slider>
                                 <ReactSlider
                                     minDistance={10}
-                                    defaultValue={[0, 100]}
+                                    defaultValue={[100]}
                                     className="w-full h-[5px] pr-2 rounded-md cursor-grab"
                                     trackClassName="h-[5px] pr-2 rounded-md cursor-grab"
                                     thumbClassName="absolute w-[12px] h-[12px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
@@ -79,7 +79,7 @@ export default function MintPage() {
                             <Slider>
                                 <ReactSlider
                                     minDistance={10}
-                                    defaultValue={[0, 100]}
+                                    defaultValue={[100]}
                                     className="w-full h-[5px] pr-2 rounded-md cursor-grab"
                                     trackClassName="h-[5px] pr-2 rounded-md cursor-grab"
                                     thumbClassName="absolute w-[12px] h-[12px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"

@@ -56,7 +56,7 @@ export default function Homepage() {
                                 data-atropos-offset="10"
                                 alt=''
                                 draggable={false}
-                                className='absolute bottom-20 sm:bottom-32 left-10 w-[300px] sm:w-[380px] lg:w-[300px] 2xl:w-[550px]'
+                                className='absolute bottom-20 sm:bottom-32 left-0 w-[300px] sm:w-[380px] lg:w-[300px] 2xl:w-[550px]'
                             />
                         </Atropos>
                     </div>
