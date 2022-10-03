@@ -93,11 +93,30 @@
   background-image: url("../public/assets/image_path_launch.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 115px;
-  height: 115px;
+  width: 100px;
+  height: 100px;
   padding-top: 5px;
   padding-left: 6px;
   overflow: hidden;
+}
+
+.launch-nft-medium {
+  background-image: url("../public/assets/image_path_launch.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  padding-top: 5px;
+  padding-left: 6px;
+  overflow: hidden;
+}
+
+.launch-nft-medium img {
+  width: 95%;
+  height: 90%;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 28%);
+  clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 28%);
+  z-index: -1;
 }
 
 .mint-nft {
@@ -277,6 +296,14 @@
   }
   .transparent-button {
     background-size: 100%;
+  }
+  .launch-main-card-left {
+    background-image: url("../public/assets/launch-main-card-left-long.png");
+    background-size: cover;
+  }
+  .launch-main-card-right {
+    background-image: url("../public/assets/launch-main-card-right-long.png");
+    background-size: cover;
   }
 }
 

@@ -33,14 +33,13 @@ export const LaunchMainCardGroup = wrapn('div')`
 
 export const LaunchMainCardLeft = wrapn('div')`
     launch-main-card-left
-    w-[520px] h-[700px] 2xl:w-[625px] 2xl:h-[872px] bg-contain bg-no-repeat
+    w-[560px] h-auto 2xl:w-[625px] 2xl:h-[872px] bg-contain bg-no-repeat
     flex flex-col items-center justify-center
 `
 
 export const LaunchMainCardRight = wrapn('div')`
     launch-main-card-right
-    border-t border-[#A3DDFF] sm:border-none
-    w-[520px] h-[700px] 2xl:w-[625px] 2xl:h-[872px] bg-contain bg-no-repeat
+    w-[560px] h-auto 2xl:w-[625px] 2xl:h-[872px] bg-contain bg-no-repeat
     flex flex-col items-center justify-center
 `
 

@@ -124,7 +124,7 @@ const LaunchPage = () => {
                 </LaunchStatusCardGroup>
                 <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-20 shadow-lg w-[200px] sm:w-[400px] 2xl:w-auto' draggable={false} />
                 <LaunchMainCardGroup>
-                    <LaunchMainCardLeft className='pt-10'>
+                    <LaunchMainCardLeft className='pt-28 pb-16 2xl:pb-0 2xl:pt-10'>
                         <Title>MINING PORTAL</Title>
                         <InputGroup>
                             <SubTitle>YOUR WALLET</SubTitle>
@@ -168,16 +168,17 @@ const LaunchPage = () => {
                             </div>
                         </InputGroup>
                     </LaunchMainCardLeft>
-                    <LaunchMainCardRight className='pt-10'>
+                    <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-0 shadow-lg w-[200px] sm:w-[300px] block sm:hidden self-center' draggable={false} />
+                    <LaunchMainCardRight className='pt-28 pb-16 2xl:pb-0 2xl:pt-10'>
                         <Title>OPERATIONS PORTAL</Title>
                         <InputGroup className='mt-3'>
                             <SubTitle>ASTRONAUTS LEFT</SubTitle>
                             <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">5</div>
                         </InputGroup>
-                        <div className='h-28'>
+                        <div className=''>
                             <ImageBtn className='my-1 2xl:mt-3 relative'>Mint</ImageBtn>
                         </div>
-                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-3 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-3 shadow-lg w-[200px] sm:w-[300px]' draggable={false} />
                         <div className='flex w-1/2 justify-between'>
                             <div className='w-[150px] relative'>
                                 <Carousel
@@ -194,14 +195,14 @@ const LaunchPage = () => {
                                     infinite
                                     ssr
                                 >
-                                    <div className='launch-nft'>
-                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <div className='launch-nft-medium'>
+                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[150px]" />
                                     </div>
-                                    <div className='launch-nft'>
-                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <div className='launch-nft-medium'>
+                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[150px]" />
                                     </div>
-                                    <div className='launch-nft'>
-                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <div className='launch-nft-medium'>
+                                        <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[150px]" />
                                     </div>
                                 </Carousel>
                             </div>
@@ -210,10 +211,11 @@ const LaunchPage = () => {
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>UNSTAKE</button>
                             </div>
                         </div>
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-3 shadow-lg w-[200px] sm:w-[300px]' draggable={false} />
                         <div className='mt-3 grid grid-cols-2 sm:grid-cols-4 w-4/5'>
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[100px]" />
                                 </div>
                                 <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
@@ -238,7 +240,7 @@ const LaunchPage = () => {
 
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[100px]" />
                                 </div>
                                 <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
@@ -263,7 +265,7 @@ const LaunchPage = () => {
 
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[100px]" />
                                 </div>
                                 <div className='flex items-start -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
@@ -293,7 +295,7 @@ const LaunchPage = () => {
 
                             <div className='flex flex-col items-center'>
                                 <div className='launch-nft'>
-                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[110px]" />
+                                    <img src='assets/launch-nft.jpg' alt='Launch page right main card carousel' draggable={false} className="w-[100px]" />
                                 </div>
                                 <div className='flex items-end -mt-3'>
                                     <img src='assets/lightning.png' alt='Lightning' />
@@ -316,7 +318,7 @@ const LaunchPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='mt-5 shadow-lg w-[100px] sm:w-[300px] hidden 2xl:block' draggable={false} />
+                        <img src='assets/mint-divider.png' alt='Mintpage Divider' className='mt-5 shadow-lg w-[200px] sm:w-[300px]' draggable={false} />
                         <InputGroup>
                             <SubTitle>FORCED WITHDRAW</SubTitle>
                             <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>(INITIAL INVESTMENT)</div>
