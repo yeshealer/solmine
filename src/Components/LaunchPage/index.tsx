@@ -30,7 +30,7 @@ interface StyledTrackProps {
 const StyledTrack = styled.div<StyledTrackProps>`
     top: 0;
     bottom: 0;
-    background: ${props => (props.index === 2 ? '#004C60' : props.index === 1 ? '#00C7FC' : '#004C60')};
+    background: ${props => (props.index === 2 ? '#004C60' : props.index === 1 ? '#004C60' : '#00C7FC')};
     border-radius: 999px;
 `;
 
@@ -222,13 +222,14 @@ const LaunchPage = () => {
                                     <div className='flex flex-col items-center'>
                                         <ReactSlider
                                             minDistance={10}
-                                            defaultValue={[0, 100]}
+                                            defaultValue={[100]}
                                             className="w-full h-[3px] pr-2 rounded-md cursor-grab"
                                             trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
                                             thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
                                             renderTrack={Track}
                                             withTracks
                                             pearling
+                                            disabled
                                         />
                                         <div className='flex items-center mt-1 gap-1'>
                                             <Icon icon="ant-design:clock-circle-filled" color="#00e9fd" width="16" height="16" />
@@ -247,13 +248,14 @@ const LaunchPage = () => {
                                     <div className='flex flex-col items-center'>
                                         <ReactSlider
                                             minDistance={10}
-                                            defaultValue={[0, 50]}
+                                            defaultValue={[50]}
                                             className="w-full h-[3px] pr-2 rounded-md cursor-grab"
                                             trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
                                             thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
                                             renderTrack={Track}
                                             withTracks
                                             pearling
+                                            disabled
                                         />
                                         <div className='flex items-center mt-1 gap-1'>
                                             <Icon icon="ant-design:clock-circle-filled" color="#00e9fd" width="16" height="16" />
@@ -273,13 +275,14 @@ const LaunchPage = () => {
                                         <div className='w-full'>
                                             <ReactSlider
                                                 minDistance={10}
-                                                defaultValue={[0, 0]}
+                                                defaultValue={[0]}
                                                 className="w-full h-[3px] pr-2 rounded-md cursor-grab"
                                                 trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
                                                 thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
                                                 renderTrack={Track}
                                                 withTracks
                                                 pearling
+                                                disabled
                                             />
                                         </div>
                                         <div className='flex items-start mt-1 gap-1'>
@@ -302,13 +305,14 @@ const LaunchPage = () => {
                                     <div className='flex flex-col items-center'>
                                         <ReactSlider
                                             minDistance={10}
-                                            defaultValue={[0, 100]}
+                                            defaultValue={[100]}
                                             className="w-full h-[3px] pr-2 rounded-md cursor-grab"
                                             trackClassName="h-[3px] pr-2 rounded-md cursor-grab"
                                             thumbClassName="absolute w-[10px] h-[10px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
                                             renderTrack={Track}
                                             withTracks
                                             pearling
+                                            disabled
                                         />
                                         <div className='flex items-center mt-1 gap-1'>
                                             <Icon icon="ant-design:clock-circle-filled" color="#00e9fd" width="16" height="16" />

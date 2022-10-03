@@ -62,6 +62,7 @@ export default function MintPage() {
                                     renderTrack={Track}
                                     withTracks
                                     pearling
+                                    disabled
                                 />
                             </Slider>
                             <PlusMinusGroup>
@@ -86,6 +87,7 @@ export default function MintPage() {
                                     renderTrack={Track}
                                     withTracks
                                     pearling
+                                    disabled
                                 />
                             </Slider>
                             <div className='flex items-center justify-between 
