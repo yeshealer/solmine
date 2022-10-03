@@ -76,9 +76,9 @@ export default function Homepage() {
                     </div>
                 </div>
                 <div className='relative mt-10 lg:mt-auto'>
+                    <img src='assets/home-description-bg-2.png' alt='Description right spaceship' draggable={false} className="relative sm:absolute right-0 sm:-right-28 top-0 sm:-top-10 lg:-top-20 2xl:-top-32 w-[180px] lg:w-[220px] 2xl:w-[250px] z-0" />
                     <Title>Are NFTs implemented?</Title>
                     <Description>As it stands, the Solmine is unique in its own right. But, why stop there? To gamify Solmine, there’s an option to add to your crew in order to mine more effectively and efficiently. Mint more astronauts to help you on your journey. On rare occasion, perhaps UFO’s and Aliens may come to assist, with their highly advanced technology. Anything is possible, I mean, did humans Really build the Great Pyramids of Giza?</Description>
-                    <img src='assets/home-description-bg-2.png' alt='Description right spaceship' draggable={false} className="relative sm:absolute right-0 sm:-right-32 top-0 sm:-top-10 lg:-top-20 2xl:-top-32 w-[180px] lg:w-[220px] 2xl:w-auto z-0" />
                 </div>
                 <ImageBtn className='mt-12'>Mint</ImageBtn>
                 <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-10 sm:my-20 shadow-lg w-[200px] sm:w-[400px] 2xl:w-auto' draggable={false} />
