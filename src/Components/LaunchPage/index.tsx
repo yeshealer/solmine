@@ -58,10 +58,10 @@ const LaunchPage = () => {
         const { carouselState: { currentSlide } } = rest;
         return (
             <div className="w-[500px]">
-                <button className={currentSlide === 0 ? 'disable' : 'absolute -left-[25px] top-[40px]'} onClick={() => previous()}>
+                <button className={currentSlide === 0 ? 'disable' : 'absolute -left-[30px] top-[50px]'} onClick={() => previous()}>
                     <Icon icon="bxs:left-arrow-alt" color="#00e9fd" width="30" height="30" />
                 </button>
-                <button onClick={() => next()} className="absolute -right-[25px] top-[40px]">
+                <button onClick={() => next()} className="absolute -right-[30px] top-[50px]">
                     <Icon icon="bxs:right-arrow-alt" color="#00e9fd" width="30" height="30" />
                 </button>
             </div>
@@ -207,8 +207,8 @@ const LaunchPage = () => {
                                 </Carousel>
                             </div>
                             <div className='grid grid-rows-2'>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>STAKE</button>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button'>UNSTAKE</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button h-10'>STAKE</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5E8CFB] underline-effect-button h-10'>UNSTAKE</button>
                             </div>
                         </div>
                         <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-3 shadow-lg w-[200px] sm:w-[300px]' draggable={false} />
