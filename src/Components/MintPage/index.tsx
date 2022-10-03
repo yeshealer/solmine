@@ -98,7 +98,7 @@ export default function MintPage() {
                             </div>
                             <ImageBtn className='mt-5 sm:mt-1 lg:mt-3 xl:mt-3 2xl:mt-8'>Mint</ImageBtn>
                         </CardSection>
-                        <div className='mint-nft w-[180px] md:w-[220px] lg:w-[250px] xl:w-[220px] 2xl:w-auto'>
+                        <div className='mint-nft w-[180px] md:w-[220px] lg:w-[250px] xl:w-[300px] 2xl:w-auto'>
                             <img src='assets/mint-nft.png' alt='MintCard' className='w-[180px] md:w-[220px] lg:w-[250px] xl:w-[220px] 2xl:w-auto' draggable={false} />
                         </div>
                     </CardBody>

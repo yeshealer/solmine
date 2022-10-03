@@ -36,7 +36,7 @@ export default function Footer() {
                         <div className='flex items-center gap-4 mt-3'>
                             {FooterLink.map((footer) => {
                                 return (
-                                    <img src={`assets/${footer}.png`} alt={footer} className="cursor-pointer w-[35px] lg:w-auto h-[35px] lg:h-auto" key={footer} />
+                                    <img src={`assets/${footer}.png`} alt={footer} className="cursor-pointer w-[30px] lg:w-[35px] h-[30px] lg:h-[35px]" key={footer} />
                                 )
                             })}
                         </div>

@@ -42,21 +42,21 @@ export default function Homepage() {
                                 data-atropos-offset="-4"
                                 alt=''
                                 draggable={false}
-                                className='absolute w-[120px] sm:w-[140px] xl:w-[160px] 2xl:w-[180px] top-20'
+                                className='absolute w-[120px] sm:w-[140px] xl:w-[160px] 2xl:w-[180px] top-16 left-10'
                             />
                             <img
                                 src='assets/atropos-3.png'
                                 data-atropos-offset="4"
                                 alt=''
                                 draggable={false}
-                                className='absolute right-0 w-[270px] sm:w-[300px] xl:w-[350px] 2xl:w-[400px]'
+                                className='absolute -right-6 w-[270px] sm:w-[300px] xl:w-[350px] 2xl:w-[400px]'
                             />
                             <img
                                 src='assets/atropos-4.png'
                                 data-atropos-offset="10"
                                 alt=''
                                 draggable={false}
-                                className='absolute bottom-20 sm:bottom-32 left-0 w-[300px] sm:w-[380px] lg:w-[300px] 2xl:w-[550px]'
+                                className='absolute bottom-20 sm:bottom-32 left-2 w-[300px] sm:w-[380px] lg:w-[400px] 2xl:w-[550px]'
                             />
                         </Atropos>
                     </div>
