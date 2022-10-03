@@ -104,7 +104,7 @@ const LaunchPage = () => {
                     data-atropos-offset="10"
                     alt=''
                     draggable={false}
-                    className='absolute bottom-20 sm:bottom-32 left-10 w-[300px] sm:w-[380px] lg:w-[300px] 2xl:w-[500px]'
+                    className='absolute bottom-20 sm:bottom-32 left-10 w-[300px] sm:w-[380px] lg:w-[300px] 2xl:w-[550px]'
                 />
             </Atropos>
             <Content>
@@ -149,7 +149,7 @@ const LaunchPage = () => {
                             <div className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-1">SOL</div>
                             <div className='w-1/2 flex justify-between mt-1'>
                                 <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>COMPOUND</button>
-                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>CLAIM (-80%)</button>
+                                <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] underline-effect-button'>CLAIM</button>
                             </div>
                         </InputGroup>
                         <img src='assets/mint-divider.png' alt='Mintpage Divider' className='my-5 shadow-lg w-[180px] sm:w-[300px] block sm:hidden' draggable={false} />

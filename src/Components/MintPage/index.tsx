@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactSlider from "react-slider"
+import styled from 'styled-components';
 import { ImageBtn } from '../style'
 import {
     MintBody,
@@ -17,9 +18,21 @@ import {
 } from './style'
 import 'react-responsive-modal/styles.css';
 
+interface StyledTrackProps {
+    index: number
+}
+
+const StyledTrack = styled.div<StyledTrackProps>`
+    top: 0;
+    bottom: 0;
+    background: ${props => (props.index === 2 ? '#004C60' : props.index === 1 ? '#00C7FC' : '#004C60')};
+    border-radius: 999px;
+`;
+
 export default function MintPage() {
     const [valueAstronauts, setValueAstronauts] = React.useState(0)
     const [valueCost, setValueCost] = React.useState(0)
+    const Track = (props: any, state: any) => <StyledTrack {...props} index={state.index} />;
     return (
         <MintBody>
             <img src='assets/mint-bg.png' alt='mint background' className='bg-container' />
@@ -41,15 +54,14 @@ export default function MintPage() {
                             </TextGroup>
                             <Slider>
                                 <ReactSlider
-                                    step={1}
-                                    min={0}
-                                    max={75}
-                                    className="w-full h-[5px] pr-2 bg-[#00F1D6] rounded-md cursor-grab"
-                                    thumbClassName="absolute w-[12px] h-[12px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 -top-[4px]"
-                                    value={valueAstronauts}
-                                    onChange={(value: number) => {
-                                        setValueAstronauts(value)
-                                    }}
+                                    minDistance={10}
+                                    defaultValue={[0, 100]}
+                                    className="w-full h-[5px] pr-2 rounded-md cursor-grab"
+                                    trackClassName="h-[5px] pr-2 rounded-md cursor-grab"
+                                    thumbClassName="absolute w-[12px] h-[12px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
+                                    renderTrack={Track}
+                                    withTracks
+                                    pearling
                                 />
                             </Slider>
                             <PlusMinusGroup>
@@ -66,15 +78,14 @@ export default function MintPage() {
                             </TextGroup>
                             <Slider>
                                 <ReactSlider
-                                    step={1}
-                                    min={0}
-                                    max={75}
-                                    className="w-full h-[5px] pr-2 bg-[#00F1D6] rounded-md cursor-grab"
-                                    thumbClassName="absolute w-[12px] h-[12px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 -top-[4px]"
-                                    value={valueCost}
-                                    onChange={(value: number) => {
-                                        setValueCost(value)
-                                    }}
+                                    minDistance={10}
+                                    defaultValue={[0, 100]}
+                                    className="w-full h-[5px] pr-2 rounded-md cursor-grab"
+                                    trackClassName="h-[5px] pr-2 rounded-md cursor-grab"
+                                    thumbClassName="absolute w-[12px] h-[12px] cursor-grab bg-[#00F1D6] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 -top-[4px]"
+                                    renderTrack={Track}
+                                    withTracks
+                                    pearling
                                 />
                             </Slider>
                             <div className='flex items-center justify-between 

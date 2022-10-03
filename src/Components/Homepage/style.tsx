@@ -14,7 +14,7 @@ export const MainContent = wrapn('div')`
 `
 
 export const DescriptionContent = wrapn('div')`
-    w-full max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl flex flex-col items-center px-5 lg:px-0
+    w-full max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl flex flex-col items-center px-5 lg:px-0 relative
 `
 
 export const Title = wrapn('div')`
@@ -22,7 +22,7 @@ export const Title = wrapn('div')`
 `
 
 export const Description = wrapn('div')`
-    text-base sm:text-lg lg:text-[20px] 2xl:text-[25px] font-["Satoshi"] mt-5
+    text-base sm:text-lg lg:text-[20px] 2xl:text-[25px] font-["Satoshi"] mt-5 z-10
 `
 
 export const LaunchReactContent = wrapn('div')`

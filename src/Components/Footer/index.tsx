@@ -62,9 +62,8 @@ export default function Footer() {
                         <input type="text" id="phone" className="bg-transparent text-white text-lg focus:ring-blue-500 focus:border-blue-500 block font-['Nippo-light'] placeholder:text-[#5DA9D6] py-2 outline-none" placeholder="Phone No" required />
                         <Icon icon="carbon:phone-voice" color="#27a0e5" width="24" height="24" />
                     </div>
-                    <div className='w-full border border-[#1CA7F5] flex justify-between items-center px-3'>
-                        <input type="email" id="email" className="bg-transparent text-white text-lg focus:ring-blue-500 focus:border-blue-500 block font-['Nippo-light'] placeholder:text-[#5DA9D6] py-2 outline-none" placeholder="Email" required />
-                        <Icon icon="fluent:mail-20-regular" color="#27a0e5" width="24" height="24" />
+                    <div className='w-full flex justify-between items-center'>
+                        <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-white text-lg bg-transparent border border border-[#1CA7F5] focus:ring-blue-500 focus:border-blue-500 outline-none placeholder:text-[#5DA9D6]" placeholder="Your message..." data-ms-editor="true" />
                     </div>
                     <ImageBtn>Send</ImageBtn>
                 </div>
