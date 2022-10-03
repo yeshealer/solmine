@@ -321,7 +321,7 @@ const LaunchPage = () => {
                         <img src='assets/mint-divider.png' alt='Mintpage Divider' className='mt-5 shadow-lg w-[200px] sm:w-[300px]' draggable={false} />
                         <InputGroup>
                             <SubTitle>FORCED WITHDRAW</SubTitle>
-                            <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>(INITIAL INVESTMENT)</div>
+                            <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>(BASE INVESTMENT)</div>
                             <div className='font-["Nippo-light"] font-thin text-[#A2DDFE]'>50% TAX</div>
                             <input type="text" id="your_wallet" className="w-1/2 bg-transparent border-[2px] border-[#5930E2] text-white text-lg focus:ring-blue-500 focus:border-blue-500 block p-1 text-center font-['Nippo-light'] outline-none mt-3" placeholder="0 SOL" required />
                             <button className='font-["Nippo-light"] text-[17px] text-[#5EBCFB] mt-2 underline-effect-button'>WITHDRAW SOL</button>
